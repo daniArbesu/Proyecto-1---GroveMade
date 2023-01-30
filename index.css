@@ -42,7 +42,8 @@ a {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   font-family: Georgia, 'Times New Roman', Times, serif;
   letter-spacing: 0;
   font-weight: 300;
@@ -56,33 +57,32 @@ h1 {
 
 h2 {
   font-size: 26px;
+  line-height: 1.26;
+  margin-bottom: 0.5em;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+.subtitle-gray {
+  color: #a0a0a0;
+  margin: 0;
 }
 
 .hero__inner > h1 {
   margin-bottom: 7px;
 }
 
-.design-inspiration__header > h2 {
-  line-height: 1.26;
-  margin-bottom: 0.5em;
-}
-
 .design-inspiration__header > p {
-  color: #a0a0a0;
   line-height: 1.5;
   margin-bottom: 20px;
 }
 
-.hero__banner {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  color: white;
+.hero {
   background: url('./public/hero-banner-img.png') rgba(0, 0, 0, 0.2);
   background-blend-mode: multiply;
   background-size: cover;
-  height: 240px;
   background-position: top -20px right 0px;
 }
 
@@ -98,15 +98,74 @@ h2 {
   text-underline-offset: 8px;
 }
 
-.design-inspiration {
-}
-
 .design-inspiration__header {
   display: flex;
   flex-direction: column;
   text-align: center;
   margin: 40px 0;
   padding: 0 7.5px;
+}
+
+.design-inspiration__content {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+  gap: 35px;
+  padding: 0 50px;
+  margin: 40px 0;
+}
+
+.design-inspiration__item-img {
+  height: 240px;
+}
+
+.design-inspiration__item-text > h3 {
+  margin-top: 1.7em;
+  margin-bottom: 0.6em;
+}
+
+.featured-products {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.product-carousel {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+
+  margin-top: 24px;
+  padding: 0 15px;
+}
+
+.shop-product {
+  max-width: 180px;
+}
+
+.shop-product__img {
+  width: 90%;
+}
+
+.shop-product__img:before {
+  background-color: #a0a0a0;
+  z-index: 2;
+}
+
+.banner {
+  color: white;
+  height: 240px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-office {
+  background-image: url('https://grovemade.imgix.net/https%3A%2F%2Fsiteleaf.grovemade.com%2Fuploads%2FbannerB-desk-collection-A1.jpg?auto=format&ixlib=python-1.1.2&w=1100&s=8a7dd29c50c966a0d7c31119234ec3b3');
+  background-size: cover;
 }
 
 @media screen and (min-width: 576px) {
@@ -131,8 +190,16 @@ h2 {
     font-size: 14px;
   }
 
-  .hero__banner {
+  .banner {
     height: 500px;
+  }
+
+  .banner__link > h2 {
+    font-size: 70px;
+    margin-bottom: 7px;
+  }
+
+  .hero {
     background-position: top -200px right 0px;
   }
 
@@ -143,6 +210,14 @@ h2 {
   .design-inspiration__header {
     margin: 80px 0;
     padding: 0 12.5px;
+  }
+
+  .design-inspiration__content {
+    gap: 25px;
+  }
+
+  .shop-product {
+    max-width: 300px;
   }
 }
 
