@@ -9,6 +9,7 @@ body {
   letter-spacing: 0.05em;
   margin: 0;
   padding: 0;
+  text-align: center;
 }
 
 .navbar {
@@ -17,6 +18,9 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem 1rem;
+  position: sticky;
+  top: 0;
+  background-color: white;
 }
 
 .navbar__menu {
@@ -53,6 +57,7 @@ h3 {
 h1 {
   font-size: 46px;
   line-height: 1;
+  margin-bottom: 7px;
 }
 
 h2 {
@@ -65,13 +70,20 @@ h3 {
   font-size: 18px;
 }
 
-.subtitle-gray {
-  color: #a0a0a0;
-  margin: 0;
+.text-container {
+  padding: 40px 15px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.hero__inner > h1 {
-  margin-bottom: 7px;
+.subtitle-gray {
+  color: #a0a0a0;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+.design-inspiration {
+  padding: 0 15px;
 }
 
 .design-inspiration__header > p {
@@ -83,11 +95,8 @@ h3 {
   background: url('./public/hero-banner-img.png') rgba(0, 0, 0, 0.2);
   background-blend-mode: multiply;
   background-size: cover;
-  background-position: top -20px right 0px;
-}
-
-.hero__inner {
-  text-align: center;
+  background-position: top -10px right 0px;
+  padding: 170px 0;
 }
 
 .cta {
@@ -99,25 +108,19 @@ h3 {
 }
 
 .design-inspiration__header {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
   margin: 40px 0;
-  padding: 0 7.5px;
 }
 
 .design-inspiration__content {
   display: flex;
   justify-content: center;
-  text-align: center;
   flex-wrap: wrap;
   gap: 35px;
-  padding: 0 50px;
   margin: 40px 0;
 }
 
 .design-inspiration__item-img {
-  height: 240px;
+  width: 100%;
 }
 
 .design-inspiration__item-text > h3 {
@@ -133,7 +136,6 @@ h3 {
 .product-carousel {
   display: flex;
   flex-wrap: wrap;
-  text-align: center;
   justify-content: center;
 
   margin-top: 24px;
@@ -156,7 +158,6 @@ h3 {
 .banner {
   color: white;
   height: 240px;
-  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -164,8 +165,68 @@ h3 {
 }
 
 .home-office {
-  background-image: url('https://grovemade.imgix.net/https%3A%2F%2Fsiteleaf.grovemade.com%2Fuploads%2FbannerB-desk-collection-A1.jpg?auto=format&ixlib=python-1.1.2&w=1100&s=8a7dd29c50c966a0d7c31119234ec3b3');
+  background: url('https://grovemade.imgix.net/https%3A%2F%2Fsiteleaf.grovemade.com%2Fuploads%2FbannerB-desk-collection-A1.jpg?auto=format&ixlib=python-1.1.2&w=1100&s=8a7dd29c50c966a0d7c31119234ec3b3')
+    rgba(0, 0, 0, 0.2);
+  background-blend-mode: multiply;
   background-size: cover;
+  background-position: top 0px right -300px;
+  padding: 170px 15px;
+}
+
+.workspace > header {
+  padding: 50px 15px;
+}
+
+.vimeo-video {
+  padding: 112.5px 0;
+  margin: 0 7.5px;
+  border: 1px solid black;
+  max-width: 570px;
+}
+
+.team {
+  padding: 0 15px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+}
+
+.team-member {
+  max-width: 175px;
+}
+
+.team-member > img {
+  width: 100%;
+}
+
+.inspires {
+  background: #9aa8b1;
+  margin: 0 15px;
+  padding: 40px 20px;
+}
+
+.team-member {
+  position: relative;
+  max-width: 100%;
+  margin: 0;
+  cursor: pointer;
+}
+
+.team-member .team-member-alternative {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.team-member:hover .team-member-alternative {
+  opacity: 1;
 }
 
 @media screen and (min-width: 576px) {
@@ -175,6 +236,10 @@ h3 {
 
   h2 {
     font-size: 46px;
+  }
+
+  h3 {
+    font-size: 30px;
   }
 
   .navbar {
@@ -206,18 +271,28 @@ h3 {
   .cta {
     font-size: 14px;
   }
+  .design-inspiration {
+    padding: 0 50px;
+  }
 
   .design-inspiration__header {
     margin: 80px 0;
-    padding: 0 12.5px;
   }
 
   .design-inspiration__content {
     gap: 25px;
+    flex-wrap: nowrap;
   }
 
   .shop-product {
     max-width: 300px;
+  }
+
+  .home-office {
+    background-position: top 0px right -100px;
+  }
+  .vimeo-video {
+    margin: 0 auto;
   }
 }
 
