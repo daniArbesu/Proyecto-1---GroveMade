@@ -171,20 +171,16 @@ h5 {
 }
 
 .product-carousel {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
   text-align: left;
   color: var(--secondary-color);
-  gap: 15px;
 
   margin-top: 24px;
   padding: 0 15px;
-}
-
-.shop-product {
-  max-width: 220px;
-  display: flex;
 }
 
 .shop-product__img .shop-product-alternative {
@@ -457,7 +453,6 @@ ul {
   }
 
   .product-carousel {
-    display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(1, 1fr);
     grid-column-gap: 25px;
